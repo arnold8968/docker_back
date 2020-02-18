@@ -101,7 +101,7 @@ temp_cpu = get_cpu()
 resource = [round(temp_cpu[i] * cpu, 2) for i in container_list]
 resource_history, performance_history, performance_history1 = [], [], []
 print('The default Limit is: ', resource)
-target = [20]
+target = 20
 # target = [10+i for i in range(container_num)]
 print("The container list is: ", container_list)
 print("The target time is: ", target)
@@ -116,7 +116,10 @@ print('The initial E_State is', E_state)
 add = 0
 add_time = random.sample(range(1, 29), 9)
 add_time.sort()
-print(add_time)
+print("usage_history: ", usage_history)
+print("add_time: ", add_time)
+print("container_num: ", container_num)
+#print("")
 
 for t in range(30):
     start_time = time.time()
@@ -145,13 +148,13 @@ for t in range(30):
                 
             current_performance = float(current_performance)
             performance.append(current_performance)
-            q[i] = target[i] - current_performance
+            q[i] = target - current_performance
 
-            if q[i] > target[i] * 0.1:
+            if q[i] > target * 0.1:
                 G.append(container_list[i])
                 # Rg += resource[i]
                 Qg += q[i]
-            elif q[i] < -target[i] * 0.1:
+            elif q[i] < -target * 0.1:
                 B.append(container_list[i])
                 # Rd += resource[i]
                 Qb += q[i]
@@ -208,14 +211,14 @@ for t in range(30):
 
             current_performance = float(current_performance)
             performance.append(current_performance)
-            q[i] = target[i] - current_performance
+            q[i] = target - current_performance
 
-            if q[i] > target[i] * 0.1:
+            if q[i] > target * 0.1:
                 G.append(container_list[i])
                 # cpus = 20
                 Rg += current_cpu
                 Qg += q[i]
-            elif q[i] < -target[i] * 0.1:
+            elif q[i] < -target * 0.1:
                   B.append(container_list[i])
                   Rb += current_cpu
                   Qb += q[i]
@@ -280,7 +283,7 @@ for t in range(30):
         add += 1
         container_list, container_num = get_container_list()
         resource.append(cpu)
-        target.append(20)
+#        target.append(20)
         time.sleep(120)
 
 performance_history = np.array(performance_history)
