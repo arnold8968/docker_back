@@ -1,0 +1,6 @@
+from tensorflow/tensorflow:1.14.0-py3
+add . /root/
+WORKDIR /root/
+RUN pip install pillow
+RUN pip install scipy
+CMD ["python3","-u","pretrained_model.py"]
