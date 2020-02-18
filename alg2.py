@@ -129,7 +129,7 @@ for t in range(30):
 
     #alpha = 0.2
     #10% of variance
-    if E_state[0,0] != 0 and E_state[1,0] > E_state[0,0]:
+    if E_state[0,0] != 0 and E_state[1,0] >= E_state[0,0]:
         if E_state[0,1] != 0 and  E_state[1,1] > E_state[0,1]:
             adjust_rate_G = 1 - alpha
             print('adjust_rate_G_ :', adjust_rate_G)
@@ -137,7 +137,7 @@ for t in range(30):
             print('adjust_rate_B_ :', adjust_rate_B)
             Rb = Rb + Rg * alpha
             Rg *= 1 - alpha
-        elif E_state[0,1] != 0 and  E_state[1,1] >= E_state[0,1]:
+        elif E_state[0,1] != 0 and  E_state[1,1] < E_state[0,1]:
             adjust_rate_G = 1 - alpha/2
             print('adjust_rate_G_ :', adjust_rate_G)
             adjust_rate_B = (Rb + Rg * alpha/2) / Rb
