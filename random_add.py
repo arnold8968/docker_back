@@ -7,6 +7,7 @@ from os import popen
 import random
 import copy
 
+'''
 #Clear all history
 command_stop = "docker kill $(sudo docker ps -q)"
 subprocess.Popen(command_stop,shell=True)
@@ -26,6 +27,7 @@ container_model_list = ["fuzzychen/1000batch","fuzzychen/vgg16","fuzzychen/incep
 run_container(container_list[0],random.choice(container_model_list))
 print("initializing~~~~~~~~~~~~Takes 60 seconds")
 time.sleep(60)
+'''
 
 cpu = 16
 alpha = 0.2
