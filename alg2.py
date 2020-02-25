@@ -180,9 +180,10 @@ for t in range(30):
         container_list,container_num = get_container_list()
         resource.append(16)
         target.append(random.randint(15,40))
+    '''
     
     time.sleep(20)
-    '''
+    
 
 
 performance_history = np.array(performance_history)
