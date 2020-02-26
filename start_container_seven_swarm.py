@@ -13,8 +13,8 @@ subprocess.Popen(command_clear,shell=True)
 time.sleep(5)
 
 def run_container(container_name,container_model):
-    command_run = 'nohup docker run --name {} {} > {}.log &'.format(container_name,container_model,container_name)
-	command_run =  "docker service create -d --restart-condition none --name {} {} > {}.log &". format(container_name,container_model,container_name)
+    #command_run = 'nohup docker run --name {} {} > {}.log &'.format(container_name,container_model,container_name)
+    command_run =  "docker service create -d --restart-condition none --name {} {} > {}.log &". format(container_name,container_model,container_name)
     subprocess.Popen(command_run,shell=True)
     print("Succesfully run container ",container_name,"collecting data now!")
 
