@@ -13,7 +13,7 @@ command_clear = "docker rm $(sudo docker ps -a -q)"
 subprocess.Popen(command_clear,shell=True)
 time.sleep(5)
 '''
-docker service ls -q | xargs docker service rm
+command_stop = "docker service ls -q | xargs docker service rm"
 subprocess.Popen(command_stop,shell=True)
 time.sleep(5)
 
