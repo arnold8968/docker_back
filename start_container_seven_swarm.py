@@ -29,5 +29,6 @@ container_model_list = ["fuzzychen/1000batch","fuzzychen/vgg16","fuzzychen/incep
 for i in range(1, 15):
     run_container('test{}'.format(i), random.choice(container_model_list))
     print("initializing~~~~~~~~~~~~Takes 180 seconds")
+    time.sleep(5)
 
-time.sleep(180)
+time.sleep(120)
