@@ -5,11 +5,16 @@ from os import popen
 import random
 
 #Clear all history
+'''
 command_stop = "docker kill $(sudo docker ps -q)"
 subprocess.Popen(command_stop,shell=True)
 time.sleep(5)
 command_clear = "docker rm $(sudo docker ps -a -q)"
 subprocess.Popen(command_clear,shell=True)
+time.sleep(5)
+'''
+docker service ls -q | xargs docker service rm
+subprocess.Popen(command_stop,shell=True)
 time.sleep(5)
 
 def run_container(container_name,container_model):
