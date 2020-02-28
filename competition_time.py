@@ -145,7 +145,8 @@ def cal_average(num):
     avg = sum_num / len(num)
     return avg
 
-print(" the model time is :", cal_average(model_time))
+print("The model's time in each run: ", model_time)
+print("The model's average time is: ", cal_average(model_time))
 
 
 usg_record.to_csv("u_free.csv")
