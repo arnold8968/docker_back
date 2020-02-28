@@ -128,7 +128,7 @@ print("add_time: ", add_time)
 print("container_num: ", container_num)
 #print("")
 
-for t in range(30):
+for t in range(25):
     start_time = time.time()
     G, B, S = [], [], []
     Rg, Rb, Qg, Qb = 0, 0, 0, 0
