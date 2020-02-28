@@ -14,8 +14,6 @@ from os import popen
 import random
 import copy
 
-add_time = []
-
 
 '''
 #Clear all history
@@ -123,17 +121,18 @@ for i in usage_history:
 
 E_state = np.ones((2, 3))
 print('The initial E_State is', E_state)
-
-
-
-
-#add = 0
-#add_time = random.sample(range(1, 29), 6)
-#add_time.sort()
+add = 0
+add_time = random.sample(range(1, 29), 6)
+add_time.sort()
 print("usage_history: ", usage_history)
+print("-----------------------------------")
 print("add_time: ", add_time)
+print("-----------------------------------")
 print("container_num: ", container_num)
 #print("")
+
+
+
 
 for t in range(30):
     start_time = time.time()
