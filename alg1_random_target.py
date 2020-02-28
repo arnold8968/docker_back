@@ -86,7 +86,7 @@ usage_history = get_cpu()
 for i in usage_history:
     usage_history[i] = [usage_history[i]]
 
-for t in range(25):
+for t in range(30):
     # G = too fast,  D = too slow, B = balanced
     start_time = time.time()
     G,B,D  = [],[],[]
