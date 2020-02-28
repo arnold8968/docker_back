@@ -14,6 +14,9 @@ from os import popen
 import random
 import copy
 
+add_time = []
+
+
 '''
 #Clear all history
 command_stop = "docker kill $(sudo docker ps -q)"
@@ -121,7 +124,7 @@ for i in usage_history:
 E_state = np.ones((2, 3))
 print('The initial E_State is', E_state)
 
-add_time = []
+
 
 
 #add = 0
