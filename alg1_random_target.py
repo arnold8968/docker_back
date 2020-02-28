@@ -7,7 +7,7 @@ from os import popen
 import random
 import copy
 
-cpus = 20
+cpus = 16
 
 def get_container_list():
     command_name = ('docker stats --no-stream --format "table {{.Name}}"')
