@@ -8,6 +8,9 @@ import random
 import copy
 
 cpus = 16
+target = []
+
+
 
 def get_container_list():
     command_name = ('docker stats --no-stream --format "table {{.Name}}"')
@@ -70,10 +73,12 @@ performance_history = []
 performance_history1 = []
 #target = [10+i for i in range(container_num)]
 #target = [20,20,20,20,20,20,20]
+'''
 target = []
 for i in range(container_num):
     target.append(random.randint(15,40))
 #target.sort()
+'''
 print("The container list is: ",container_list)
 print("The target time is: ",target)
 
