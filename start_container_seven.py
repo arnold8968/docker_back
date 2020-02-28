@@ -18,7 +18,7 @@ def run_container(container_name,container_model):
     print("Succesfully run container ",container_name,"collecting data now!")
 
 container_list = ["test1","test2","test3","test4","test5","test6","test7"]
-container_model_list = ["fuzzychen/1000batch","fuzzychen/vgg16","fuzzychen/inceptionv3","fuzzychen/res50","fuzzychen/xcep", "fuzzychen/inceptionv3","fuzzychen/res50"]
+container_model_list = ["fuzzychen/1000batch","fuzzychen/vgg16","fuzzychen/inceptionv3","fuzzychen/res50","fuzzychen/xcep"]
 ran_list = random.sample(range(len(container_model_list)), len(container_model_list))
 
 for i in range(len(container_list)):
