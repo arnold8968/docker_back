@@ -76,7 +76,7 @@ usage_history = get_cpu()
 for i in usage_history:
     usage_history[i] = [usage_history[i]]
 
-for t in range(30):
+for t in range(25):
     # G = too fast,  B = bad----too slow , S = stay the  same ( balanced)
     G,B,S  = [],[],[]
     Rg,Rb,Qg,Qb = 0,0,0,0
