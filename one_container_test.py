@@ -1,4 +1,4 @@
-import re
+1import re
 import subprocess
 import time
 from os import popen
@@ -20,7 +20,8 @@ def run_container(container_name,container_model):
 container_list = ["test1"]
 container_model_list = ["fuzzychen/1000batch","fuzzychen/vgg16","fuzzychen/inceptionv3","fuzzychen/res50","fuzzychen/xcep", "fuzzychen/inceptionv3","fuzzychen/res50"]
 
-run_container(container_list[0],container_model_list[0])
-print(container_list[0],container_model_list[0])
+i = 1
+run_container(container_list[0],container_model_list[i])
+print(container_list[0],container_model_list[i])
 print("initializing~~~~~~~~~~~~Takes 10 seconds")
 time.sleep(60)
