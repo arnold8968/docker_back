@@ -33,23 +33,30 @@ start_container.py is the file just start one container, I run it before running
 If you have any questions, please let me know. Thanks!
 
 
+
 Docker Swarm install
-
-##Step 1
-
+Step 1
 install docker in all nodes.
 chmod 777 install.sh
 ./install.sh
 
-
-##Step 2
-
+Step 2
 In master node
 init docker swarm by using:
 docker swarm init
 
 The output contains the: docker swarm join-token command 
 
-##Step 3
-
+Step 3
 Copy swarm token command and paste in each workers, which let the worker join in the Swarm
+
+check the state
+-- docker node ls
+-- docker service ls
+
+
+
+update git`
+git pull origin master
+
+
