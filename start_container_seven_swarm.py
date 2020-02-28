@@ -29,7 +29,8 @@ ran_list = random.sample(range(len(container_model_list)), len(container_model_l
 print(ram_list)
 
 for i in range(1, 28):
-    run_container('test{}'.format(i), container_model_list[i % len(container_model_list)])
+    run_container('test{}'.format(i), container_model_list[ran_list[i % len(container_model_list)]])
+    print('test{}'.format(i), container_model_list[ran_list[i % len(container_model_list)]])
     print("initializing~~~~~~~~~~~~Takes 180 seconds")
     time.sleep(3)
 
