@@ -70,6 +70,8 @@ target = [20,20,20,20,20,20,20]
 #target = [10+i for i in range(container_num)]
 print("The container list is: ", container_list)
 print("The target time is: ", target)
+model_time = []
+
 
 history_batch_time = {}
 usage_history = get_cpu()
@@ -122,7 +124,8 @@ for t in range(3):
     resource_history.append(update_resource)
     print("The balanced container: ", S)
     end = time.time()
-    print("the running time is: ", start - end)
+    print("the running time is: ", end - start)
+    model_time.append(end - start)
 
     time.sleep(20)
 
@@ -133,6 +136,17 @@ performance_record1 = pd.DataFrame({'G': performance_history1[:, 0], 'D': perfor
 resource_history = np.array(resource_history)
 resource_record = pd.DataFrame(resource_history, columns=container_list)
 usg_record = pd.DataFrame.from_dict(usage_history)
+
+def cal_average(num):
+    sum_num = 0
+    for t in num:
+        sum_num = sum_num + t           
+
+    avg = sum_num / len(num)
+    return avg
+
+print(" the model time is :", cal_average(model_time))
+
 
 usg_record.to_csv("u_free.csv")
 performance_record.to_csv("p_free.csv")
